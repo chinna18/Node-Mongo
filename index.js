@@ -44,7 +44,6 @@ app.get("/students", async (req, res) => {
     const data = await db.collection("students").find().toArray();
     res.status(200).json({ message: "Success", data });
   } catch (error) {
-    console.log(error);
     res.json({ message: "Error occured" });
   } finally {
     //close connection
