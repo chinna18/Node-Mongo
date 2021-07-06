@@ -25,7 +25,6 @@ app.post("/students", async (req, res) => {
     const data = db.collection("students").insertOne(req.body);
     res.json({ message: "Record Created" });
   } catch (error) {
-    console.log(error);
     res.json({ message: "Error occured" });
   } finally {
     //close connection 
